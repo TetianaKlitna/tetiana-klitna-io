@@ -5,44 +5,122 @@
     <meta name="author" content="Tetiana Klitna" />
     <meta name="keywords" content="HTML, CSS, Javascript" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/index.css" />
   </head>
+
   <body>
-    <h1>Tetiana Klitna</h1>
-    <section id="About">
-    <h2>About</h2>
-    <p>My name is Tetiana.</p>
-    <p>
-      I am currently a Code The Dream student and started my software
-      development journey about 2 years ago.
-    </p>
-    <p>
-      Before coming to CTD, I worked for over 5 years in data engineering,
-      analysis, testing, and utilizing accounting software programs. This
-      experience tested my data-driven skills and sparked my interest in web
-      programming.
-    </p>
-    <p>
-      I have a strong passion for developing applications that make a real
-      difference in solving everyday problems. To me, software development is
-      more than just coding; it's about crafting solutions that tackle
-      challenges people and communities encounter.
-    </p>
-    <p>If I am not coding, you can find me hiking, cooking, or camping.</p>
-  </section>
-  <section id = "Experience">
-    <h2>Experience</h2>
-    <ul>
-      <li>HTML, Javascript, CSS</li>
-      <li>Oracle, PL/SQL, Java</li>
-      <li>GitHub, GIT, JIRA</li>
-    </ul>
-    </section>
-    <section id = "Connect">
-    <h2>Connect</h2>
-    <ul>
-      <li><a href="https://www.linkedin.com/in/tetianaklitna/">LinkedIn</a></li>
-      <li><a href="https://github.com/TetianaKlitna/">GitHub</a></li>
-    </ul>
-    </section>
+    <header>
+      <div class="menu-right">
+        <img
+          class="logo"
+          src="img/logo.jpg"
+          alt="Seattle vector image"
+          title="Seattle vector immage"
+        />
+      </div>
+      <div class="menu">
+        <a href="#">Home</a>
+        <a href="#about">About</a>
+        <a href="#skills">Skills</a>
+        <a href="#portfolio">Portfolio</a>
+        <a href="#resume">Resume</a>
+        <a href="#connect">Connect</a>
+      </div>
+    </header>
+
+    <main>
+
+      <section id="home">
+        <div class = "text-section">
+          <p><h2>Hello! I'm Tetiana!</h2></p>
+          <p>
+            <h2>I'm a <strong>Full Stack Developer</strong></h2>
+          </p>
+          <p><h4>I am passionate about developing applications that address real-world challenges.
+          I love using data to uncover insights and drive informed decision-making, enhancing both functionality and impact.</h4></p>
+          <ul class="links">
+            <li>
+              <a class = "a-link" href="https://www.linkedin.com/in/tetianaklitna/">
+                <img class = "img-logo" src="img/linkedin_icon.png" alt="LinkedIn logo"><h4>LinkedIn</h4>
+              </a>
+            </li>
+            <li>
+              <a class = "a-link" href="https://github.com/TetianaKlitna/">
+                <img class = "img-logo" src="img/social_github_icon.png" alt="GitHub logo"><h4>GitHub</h4>
+              </a> 
+            </li>
+          </ul>
+        </ul>
+        </div>
+        <div class = "img-section"><img src="img/me.jpg" alt="Tetiana Klitna's photo " /></div>
+      </section>
+
+      <hr>
+
+      <section id="about">
+
+        <h2>About</h2>
+        Currently, I'm a student at Code The Dream Program.
+
+        <p>
+          Before joining Code The Dream program, I accumulated over five years
+          of experience in data engineering, analysis, and testing. This background honed my data-driven skills and
+          ignited my passion for web programming.
+        </p>
+
+        <p>
+          I am deeply committed to creating applications that make a meaningful
+          impact by addressing real-world problems. For me, software development
+          is not just about writing code; it's about designing solutions that
+          help people and communities thrive.
+        </p>
+
+        <p>
+          When I'm not coding, you might find me hiking or traveling.
+        </p>
+      </section>
+      
+      <hr>
+
+      <section id="skills">
+        <h2>Skills</h2>
+        <table>
+          <tr>
+            <td><img src="img/html_icon.png" alt="HTML logo"><p>HTML</p></td>
+            <td><img src="img/css_icon.png" alt="CSS logo"><p>CSS</p></td>
+            <td><img src="img/js_icon.png" alt="Javascript logo"><p>Javascript</p></td></td>
+          </tr>
+          <tr>
+            <td><img src="img/java_icon.png" alt="Java logo"><p>Java</p></td>
+            <td><img src="img/oracle_icon.png" alt="Oracle logo"><p>Oracle</p></td>
+            <td><img src="img/python_icon.png" alt="Python logo"><p>Python</p></td>
+          </tr>
+        </table>
+      </section>
+
+      <hr>
+
+      <section id="connect">
+        <h2>Contact Me</h2>
+        <ul class="links">
+          <li>
+            <a class = "a-link" href="mailto:klitna.tetiana@gmail.com">
+              <img src="img/email_gmail_icon.png" alt="Google Mail logo"/>Email: klitna.tetiana@gmail.com
+            </a> 
+          </li>
+          <li>
+            <a class = "a-link" href="#connect">
+              <img src="img/call_logo.png" alt="Cell Phone logo"/>Cell Phone: (425)-480-0484
+            </a> 
+          </li>
+        </ul>
+
+      </section>
+
+    </main>
+
+    <footer>
+      I turn coffee☕️ into code. Build by Tetiana Klitna 2024
+    </footer>
   </body>
 </html>
