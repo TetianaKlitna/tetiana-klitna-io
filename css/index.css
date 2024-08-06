@@ -3,28 +3,43 @@ body {
   height: auto;
   background-attachment: fixed;
   background-size: cover;
+  font-family: "Trirong", serif;
 }
 
 /*--------Header------------*/
 header {
   background-color: #273b3a;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  /*--sticky header--*/
+  /* position: fixed;
+  top: 0;  */
 }
 
 .logo {
   position: relative;
-  width: 40%;
+  width: 60%;
 }
 
-.menu {
+.containter {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
   padding: 20px;
+  flex-wrap: wrap;
 }
 
-.menu a {
+.containter a {
   text-decoration: none;
   margin-left: 20px;
   color: #f5f7f8;
   font-size: 24px;
 }
+
+
 /*------------Main---------*/
 main {
   background-color: #f5f7f890;
@@ -44,10 +59,6 @@ hr {
 
 /*------------Home--------------*/
 
-#home {
-  display: flex;
-}
-
 .text-section {
   flex: 60%;
   text-align: center;
@@ -59,35 +70,56 @@ hr {
   margin: 10px;
 }
 
+.img-section{
+  text-align: center;
+}
+
 .img-section img {
   border-radius: 50%;
   width: 70%;
+
   border: 2px solid #273b3a;
   box-shadow: 0px 4px 25px #45474b;
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
+
+  margin: 2%;
+
 }
 
 /*------------About-----*/
 #about {
   text-align: justify;
 }
+.row-view{
+  display: flex;
+}
+
 /*------------Skills-----*/
 
-table{
-    width: 100%;
+#skills ul{
+  display: flex;
+  flex-wrap: wrap;
+  list-style: none;
+  text-align: center;
+  /*justify-content: space-around;*/
 }
-table tr td {
-    text-align: center;
-    border: 1px solid #273b3a80;
+
+#skills ul li {
+    border: 2px solid #273b3a80;
     border-left: 5px solid #379777;
+    margin: 5px;
+    flex: 0 0 30%;
     
+}
+
+#skills ul li img{
+  padding: 10px;
 }
 /*------------Connect-----*/
 
-#content ul{
+#connect ul{
    display: flex;
+   flex-direction: horizontal;
+   flex-wrap: wrap;
 }
 
 #connect img {
@@ -107,6 +139,8 @@ table tr td {
 .links {
     list-style-type: none;
     display: flex;
+    flex-direction: horizontal;
+    flex-wrap: wrap;
     padding-left: 0;
     align-items: center;
     justify-content: center;
