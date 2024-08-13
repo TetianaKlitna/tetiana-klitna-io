@@ -6,11 +6,15 @@
     <meta name="keywords" content="HTML, CSS, Javascript" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="css/index.css" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css?family=Trirong"
+    />
   </head>
 
   <body>
-    <header>
-      <div class="menu-right">
+    <div class="container">
+      <div class="header border-style">
         <img
           class="logo"
           src="img/logo.jpg"
@@ -18,109 +22,193 @@
           title="Seattle vector immage"
         />
       </div>
-      <div class="menu">
-        <a href="#">Home</a>
-        <a href="#about">About</a>
-        <a href="#skills">Skills</a>
-        <a href="#portfolio">Portfolio</a>
-        <a href="#resume">Resume</a>
-        <a href="#connect">Connect</a>
-      </div>
-    </header>
+      <!-- end header -->
+    
+      <nav class="menu border-style"> 
+        <ul class="nav-bar">     
+          <li>
+            <a href="#about">About</a>
+          </li>
+          <li>
+            <a href="#experience">Experience</a>
+          </li>
+          <li>
+            <a href="#skills">Skills</a>
+          </li>
+          <li>
+            <a href="#projects">Projects</a>
+          </li>
+          <li>
+            <a href="#connect">Connect</a>
+          </li>
+        </ul>
+       
+        <div class="social-media">
+            <a class="a-link" href="https://www.linkedin.com/in/tetianaklitna/">
+              <img
+                class="img-logo"
+                src="img/linkedin_icon.png"
+                alt="LinkedIn logo"
+              />
+            </a>
 
-    <main>
+            <a class="a-link" href="https://github.com/TetianaKlitna/">
+              <img
+                class="img-logo"
+                src="img/social_github_icon.png"
+                alt="GitHub logo"
+              />
+            </a>
+        </div>
+        </nav> <!-- end menu -->
 
-      <section id="home">
-        <div class = "text-section">
-          <p><h2>Hello! I'm Tetiana!</h2></p>
+      <div class="content border-style">
+        <section id="about">
+          <div class="intro">
+      
+            <div class="text-section">
+              <h2>
+                <p>Hello! I'm Tetiana!</p>
+                <p>I'm a <strong>Full Stack Developer</strong></p>
+              </h2>
+              <h4>
+                <p>
+                  I am passionate about developing applications that address
+                  real-world challenges. I love using data to uncover insights and
+                  drive informed decision-making, enhancing both functionality and
+                  impact.
+                </p>
+              </h4>
+            </div><!-- end text-section -->
+
+            <div class="img-section">
+              <img src="img/me.jpg" alt="Tetiana Klitna's photo " />
+            </div>
+
+          </div><!-- end intro -->
+
+          <h2>About</h2>
+
+          <p>Currently, I'm a student at Code The Dream Program.</p>
+
           <p>
-            <h2>I'm a <strong>Full Stack Developer</strong></h2>
+            Before joining Code The Dream program, I accumulated over five years
+            of experience in data engineering, analysis, and testing. This
+            background honed my data-driven skills and ignited my passion for
+            web programming. I am deeply committed to creating applications that make a
+            meaningful impact by addressing real-world problems. For me,
+            software development is not just about writing code; it's about
+            designing solutions that help people and communities thrive.
           </p>
-          <p><h4>I am passionate about developing applications that address real-world challenges.
-          I love using data to uncover insights and drive informed decision-making, enhancing both functionality and impact.</h4></p>
+
+          <p>When I'm not coding, you might find me hiking or traveling.</p>
+        </section>
+
+        <hr />
+
+        <section id="experience">
+          <h2>Experience</h2>
+
+          <div class="timeline">
+            <div class="left">
+              <div class="content">
+                <h4>Jun 2020 - Aug 2022</h4>
+                <p>Data SQL Developer</p>
+              </div>
+              <!-- end content -->
+            </div>
+            <!-- end left -->
+
+            <div class="right">
+              <div class="content">
+                <h4>May 2013 - Apr 2017</h4>
+                <p>Data SQL Developer</p>
+              </div>
+              <!-- end content -->
+            </div>
+            <!-- end right -->
+          </div>
+        </section>
+
+        <hr />
+
+        <section id="skills">
+          <h2>Skills</h2>
+          <div class="images-grid">
+              <div class="img-item">
+                <img src="img/html_icon.png" alt="HTML logo" />
+                <p>HTML</p>
+              </div>
+              <div class="img-item">
+                <img src="img/css_icon.png" alt="CSS logo" />
+                <p>CSS</p>
+              </div>
+              <div class="img-item">
+                <img src="img/js_icon.png" alt="Javascript logo" />
+                <p>Javascript</p>
+              </div>
+              <div class="img-item">
+                <img src="img/java_icon.png" alt="Java logo" />
+                <p>Java</p>
+              </div>
+              <div class="img-item">
+                <img src="img/oracle_icon.png" alt="Oracle logo" />
+                <p>Oracle</p>
+              </div>
+              <div class="img-item">
+                <img src="img/python_icon.png" alt="Python logo" />
+                <p>Python</p>
+              </div>
+          </div><!--  end img-grid -->
+
+        </section>
+
+        <hr/>
+
+        <section id="projects">
+          <h2 id="">Projects</h2>
+        </section>
+
+        <hr />
+
+        <section id="connect">
+          <h2>Connect</h2>
+
           <ul class="links">
             <li>
-              <a class = "a-link" href="https://www.linkedin.com/in/tetianaklitna/">
-                <img class = "img-logo" src="img/linkedin_icon.png" alt="LinkedIn logo"><h4>LinkedIn</h4>
+              <a class="a-link" href="#">
+                <img src="img/location_icon.png" alt="Location logo" />Seattle,
+                Washington<br />
               </a>
             </li>
             <li>
-              <a class = "a-link" href="https://github.com/TetianaKlitna/">
-                <img class = "img-logo" src="img/social_github_icon.png" alt="GitHub logo"><h4>GitHub</h4>
-              </a> 
+              <a class="a-link" href="mailto:klitna.tetiana@gmail.com">
+                <img
+                  src="img/email_gmail_icon.png"
+                  alt="Google Mail logo"
+                />klitna.tetiana@gmail.com
+              </a>
+            </li>
+            <li>
+              <a class="a-link" href="#connect">
+                <img
+                  src="img/call_logo.png"
+                  alt="Cell Phone logo"
+                />(425)-480-0484
+              </a>
             </li>
           </ul>
-        </ul>
-        </div>
-        <div class = "img-section"><img src="img/me.jpg" alt="Tetiana Klitna's photo " /></div>
-      </section>
-
-      <hr>
-
-      <section id="about">
-
-        <h2>About</h2>
-        Currently, I'm a student at Code The Dream Program.
-
-        <p>
-          Before joining Code The Dream program, I accumulated over five years
-          of experience in data engineering, analysis, and testing. This background honed my data-driven skills and
-          ignited my passion for web programming.
-        </p>
-
-        <p>
-          I am deeply committed to creating applications that make a meaningful
-          impact by addressing real-world problems. For me, software development
-          is not just about writing code; it's about designing solutions that
-          help people and communities thrive.
-        </p>
-
-        <p>
-          When I'm not coding, you might find me hiking or traveling.
-        </p>
-      </section>
       
-      <hr>
+        </section>
 
-      <section id="skills">
-        <h2>Skills</h2>
-        <table>
-          <tr>
-            <td><img src="img/html_icon.png" alt="HTML logo"><p>HTML</p></td>
-            <td><img src="img/css_icon.png" alt="CSS logo"><p>CSS</p></td>
-            <td><img src="img/js_icon.png" alt="Javascript logo"><p>Javascript</p></td></td>
-          </tr>
-          <tr>
-            <td><img src="img/java_icon.png" alt="Java logo"><p>Java</p></td>
-            <td><img src="img/oracle_icon.png" alt="Oracle logo"><p>Oracle</p></td>
-            <td><img src="img/python_icon.png" alt="Python logo"><p>Python</p></td>
-          </tr>
-        </table>
-      </section>
+      </div>
+      <!-- end content -->
 
-      <hr>
-
-      <section id="connect">
-        <h2>Contact Me</h2>
-        <ul class="links">
-          <li>
-            <a class = "a-link" href="mailto:klitna.tetiana@gmail.com">
-              <img src="img/email_gmail_icon.png" alt="Google Mail logo"/>Email: klitna.tetiana@gmail.com
-            </a> 
-          </li>
-          <li>
-            <a class = "a-link" href="#connect">
-              <img src="img/call_logo.png" alt="Cell Phone logo"/>Cell Phone: (425)-480-0484
-            </a> 
-          </li>
-        </ul>
-
-      </section>
-
-    </main>
-
-    <footer>
-      I turn coffee☕️ into code. Build by Tetiana Klitna 2024
-    </footer>
+      <div class="footer border-style">
+        I turn coffee☕️ into code. Build by Tetiana Klitna 2024
+      </div>
+      <!-- end footer -->
+    </div>
+    <!-- end container -->
   </body>
 </html>

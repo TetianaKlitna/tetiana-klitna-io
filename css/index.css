@@ -1,32 +1,121 @@
 body {
-  background: linear-gradient(#273b3a80, #f5f7f8, #379777);
-  height: auto;
-  background-attachment: fixed;
-  background-size: cover;
+  background: linear-gradient(#273b3a40, #f5f7f8, #37977780);
+  font-family: "Trirong", serif;
+  width: 90%;
+  max-width: 1200px;
+  margin: 2% auto; 
+  font-size: 24px;
+
+  /*
+    height: auto;
+    background-attachment: fixed;
+    background-size: cover;
+  */
 }
 
+/*--------Start Layout Grid------*/
+ .container {
+  height: 100%;
+  display: grid;
+  grid-gap: 0.5em; 
+  grid-template-areas: 
+      "h h h h h"
+      "m m m m m"
+      "c c c c c"
+      "f f f f f";
+}
+
+.header {
+  grid-area: h;
+}
+
+
+.menu {
+  grid-area: m;
+
+}
+
+.content {
+  grid-area: c;
+}
+
+.footer {
+  grid-area: f;
+} 
+
+/*--------End Layout Grid------*/
+/*--------Start Flex Box-------*/
+.menu,
+.nav-bar{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+/*Right position of LinkedIn and GitHub items in the menu*/
+.nav-bar{
+  margin-right: auto;
+}
+
+.social-media{
+  display: flex;
+}
+
+.intro{
+  display: flex;
+  flex-direction: row;
+}
+
+#connect ul{
+  display: flex;
+  flex-direction: horizontal;
+  flex-wrap: wrap;
+}
+
+/*--------End Flex Box------*/
 /*--------Header------------*/
-header {
+.header {
   background-color: #273b3a;
+  align-items: center;
+  justify-content: center;
 }
 
 .logo {
-  position: relative;
-  width: 40%;
+  position: relative; 
+  width: 80%;
+} 
+/*--------Menu------------*/
+
+nav{
+  text-align: center;
+  align-items: center;
 }
 
-.menu {
-  padding: 20px;
+.menu{
+  font-size: 1.5rem;
+  background-color:  #273b3a50;
+  color: #f5f7f8;
+}
+
+.nav-bar{
+  padding:0;
+  list-style: none;
+  gap: 1em;
 }
 
 .menu a {
   text-decoration: none;
-  margin-left: 20px;
   color: #f5f7f8;
-  font-size: 24px;
 }
-/*------------Main---------*/
-main {
+
+.menu a:hover,
+.menu a:focus{
+   color: #273b3a;
+} 
+
+/*------Content-----------*/
+.content {
+  font-size: 1rem;
   background-color: #f5f7f890;
   color: #273b3a;
 }
@@ -34,65 +123,67 @@ main {
 h2 {
   text-align: center;
   color: #379777;
+  font-size: 1.5rem;
+  font-weight:400;
 }
 
 hr {
   border: 1px solid #273b3a80;
   width: 100%;
-  margin: 20px 0;
+  margin: 1em 0;
 }
 
-/*------------Home--------------*/
-
-#home {
-  display: flex;
+p {
+  text-indent: 1em;
 }
+
+/*------------Content: Home--------------*/
 
 .text-section {
-  flex: 60%;
+  flex: 50%;
   text-align: center;
   padding-top: 5px;
   padding-bottom: 5px;
 }
 
+/*LinkedIn logo, GitHub, ect*/
 .img-logo {
-  margin: 10px;
+  margin: 2px;
+}
+
+/*Style for my foto*/
+.img-section{
+  text-align: center;
 }
 
 .img-section img {
+  width: 60%;
   border-radius: 50%;
-  width: 70%;
   border: 2px solid #273b3a;
   box-shadow: 0px 4px 25px #45474b;
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
+  margin: 2%;
 }
 
-/*------------About-----*/
+/*------------Content: About-----*/
 #about {
   text-align: justify;
 }
-/*------------Skills-----*/
-
-table{
-    width: 100%;
-}
-table tr td {
-    text-align: center;
-    border: 1px solid #273b3a80;
-    border-left: 5px solid #379777;
-    
-}
-/*------------Connect-----*/
-
-#content ul{
-   display: flex;
+/*------------Content: Skills-----*/
+.images-grid {
+  display: grid;
+  grid-gap: 5px;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  grid-auto-rows: 200px;
+  text-align: center;
 }
 
+.img-item{
+  padding-bottom: 0.5em;
+}
+/*------------Content: Connect-----*/
 #connect img {
-    padding: 10px;
-  }
+  padding: 0.5em;
+}
 /*--------------------*/
 
 .a-link {
@@ -102,29 +193,71 @@ table tr td {
   display: flex;
   align-items: center;
   justify-content: center;
+  padding: 2px;
 }
 
-.links {
+.links{
     list-style-type: none;
     display: flex;
-    padding-left: 0;
-    align-items: center;
-    justify-content: center;
+    flex-direction: horizontal;
+    flex-wrap: wrap;
+    padding-left: 10px;
+    align-items: left;
+    justify-content: left;
   }
   
-
-header,
-footer {
+/*-------------------------*/
+.header,
+.footer {
+  font-size: 1rem;
   background-color: #273b3a;
   color: #f5f7f8;
   text-align: center;
+} 
+
+.border-style { 
+  border-radius: 0.5em;
+  padding: 1em;
+  border: 2px solid #273b3a;
+  box-shadow: 0px 0.5em 1em #45474b;
+}
+/*--------Start Media-------*/
+/*styles for mobiles*/
+@media (max-width: 767px)
+ { 
+  .intro{
+    flex-direction: column;
+  }
+  .nav-bar{
+    flex-direction: column;
+  }
+  .menu{
+    text-align: left;
+    align-items: start;
+  }
+  body {
+    background-color: #eaeaea;
+  }
+}
+/*styles for tablets*/
+@media (min-width: 768px) and (max-width: 1023px){
+  .nav-bar{
+    flex-direction: column;
+  }
+  .menu{
+    text-align: left;
+    align-items: start;
+  }
+  body {
+      background-color: #00b2ca  ;
+  }
+  
 }
 
-header,
-main,
-footer {
-  margin: 10px 20%;
-  border-radius: 10px;
-  padding: 20px;
-  box-shadow: 0px 4px 25px #45474b;
+/* styles for desktops*/
+@media (min-width: 1024px) {
+  body {
+      background-color: #7dcfb6 ;
+  }
 }
+/*--------End Media---------*/
