@@ -6,15 +6,15 @@
     <meta name="keywords" content="HTML, CSS, Javascript" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="css/index.css" />
-    <link
-      rel="stylesheet"
-      href="https://fonts.googleapis.com/css?family=Trirong"
-    />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Trirong" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Sofia" />
   </head>
 
   <body>
     <div class="container">
+      
       <div class="header border-style">
+        <div class="my-name">Tetiana Klitna</div>
         <img
           class="logo"
           src="img/logo.jpg"
@@ -25,24 +25,32 @@
       <!-- end header -->
     
       <nav class="menu border-style"> 
-        <ul class="nav-bar">     
-          <li>
-            <a href="#about">About</a>
-          </li>
-          <li>
-            <a href="#experience">Experience</a>
-          </li>
-          <li>
-            <a href="#skills">Skills</a>
-          </li>
-          <li>
-            <a href="#projects">Projects</a>
-          </li>
-          <li>
-            <a href="#connect">Connect</a>
-          </li>
-        </ul>
        
+        <div class="menu-items">
+          
+          <!-- Visible in mobile and tablet views -->
+          <input type="checkbox" id="humburger">
+
+          <!-- Visible in desctop view -->
+          <ul class="nav-bar">     
+            <li class="nav-item">
+              <a href="#about">About</a>
+            </li>
+            <li class="nav-item">
+              <a href="#experience">Experience</a> 
+            </li>
+            <li class="nav-item">
+              <a href="#skills">Skills</a>
+            </li>
+            <li class="nav-item">
+              <a href="#projects">Projects</a>
+            </li>
+            <li class="nav-item">
+              <a href="#connect">Connect</a>
+            </li>
+          </ul>
+        </div><!-- end menu-items -->
+
         <div class="social-media">
             <a class="a-link" href="https://www.linkedin.com/in/tetianaklitna/">
               <img
@@ -198,7 +206,7 @@
               </a>
             </li>
           </ul>
-      
+  
         </section>
 
       </div>
@@ -210,5 +218,6 @@
       <!-- end footer -->
     </div>
     <!-- end container -->
+
   </body>
 </html>

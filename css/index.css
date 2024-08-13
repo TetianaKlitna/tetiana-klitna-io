@@ -4,7 +4,7 @@ body {
   width: 90%;
   max-width: 1200px;
   margin: 2% auto; 
-  font-size: 24px;
+  font-size: 20px;
 
   /*
     height: auto;
@@ -53,7 +53,7 @@ body {
 }
 
 /*Right position of LinkedIn and GitHub items in the menu*/
-.nav-bar{
+.menu-items{
   margin-right: auto;
 }
 
@@ -84,6 +84,12 @@ body {
   position: relative; 
   width: 80%;
 } 
+
+.my-name{
+  font-family: "Sofia", sans-serif;
+  font-size: 24px;
+  text-align: left;
+}
 /*--------Menu------------*/
 
 nav{
@@ -112,6 +118,26 @@ nav{
 .menu a:focus{
    color: #273b3a;
 } 
+
+/*-- image as a checkbox in CSS----*/
+input[type="checkbox"] {
+  appearance: none;
+  width: 48px;
+  height: 48px; 
+  background-image: url('../img/menu_icon.png');
+  background-size: cover;
+  cursor: pointer; 
+}
+
+input[type="checkbox"]:checked {
+  background-image: url('../img/delete_icon.png');
+}
+
+/*when the checkbox is checked, we’ll show the menu*/
+#humburger:checked ~ 
+ .nav-bar {
+   display: block;
+ }
 
 /*------Content-----------*/
 .content {
@@ -223,8 +249,13 @@ p {
 }
 /*--------Start Media-------*/
 /*styles for mobiles*/
-@media (max-width: 767px)
+@media (max-width: 830px)
  { 
+
+  .img-section img {
+    width: 40%;
+  }
+
   .intro{
     flex-direction: column;
   }
@@ -235,29 +266,50 @@ p {
     text-align: left;
     align-items: start;
   }
-  body {
-    background-color: #eaeaea;
+
+  .nav-bar{
+    display: none;
   }
+
 }
 /*styles for tablets*/
-@media (min-width: 768px) and (max-width: 1023px){
-  .nav-bar{
+@media (min-width: 831px) and (max-width: 1023px){
+  /* .nav-bar{
     flex-direction: column;
   }
   .menu{
     text-align: left;
     align-items: start;
-  }
+  } */
+
   body {
-      background-color: #00b2ca  ;
+    font-size: 16px;
+  }
+
+  #humburger{
+    display: none;
+  }
+
+  .nav-bar{
+    display: flex;
   }
   
 }
 
+
 /* styles for desktops*/
 @media (min-width: 1024px) {
-  body {
-      background-color: #7dcfb6 ;
+   body {
+    font-size: 24px;
+   }
+
+  .nav-bar{
+    display: flex;
   }
+
+  #humburger{
+    display: none;
+  }
+ 
 }
 /*--------End Media---------*/
