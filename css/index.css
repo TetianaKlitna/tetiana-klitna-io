@@ -56,6 +56,13 @@ body {
 .menu-items{
   margin-right: auto;
 }
+.job{
+  display: flex;
+}
+
+.date-period{
+  margin-right: auto;
+}
 
 .social-media{
   display: flex;
@@ -71,6 +78,7 @@ body {
   flex-direction: horizontal;
   flex-wrap: wrap;
 }
+
 
 /*--------End Flex Box------*/
 /*--------Header------------*/
@@ -193,6 +201,11 @@ p {
 /*------------Content: About-----*/
 #about {
   text-align: justify;
+}
+/*------------Content: Expriance-------*/
+.date-period,
+.job{
+  font-weight:bold;
 }
 /*------------Content: Skills-----*/
 .images-grid {
