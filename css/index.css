@@ -171,6 +171,11 @@ p {
   text-indent: 1em;
 }
 
+a{
+  text-decoration: none;
+  color: #273b3a;
+}
+
 /*------------Content: Home--------------*/
 
 .text-section {
@@ -226,8 +231,6 @@ p {
 /*--------------------*/
 
 .a-link {
-  text-decoration: none;
-  color: #273b3a;
   /*centered text*/
   display: flex;
   align-items: center;
@@ -244,6 +247,34 @@ p {
     align-items: left;
     justify-content: left;
   }
+
+input, textarea{
+  width: 100%;
+}
+
+textarea{
+  min-height: 100px;
+}
+
+.btn-style {
+  background-color: #379777;
+  border: none;
+  color: #f5f7f8;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 1rem;
+  margin: 1px 1px;
+  cursor: pointer;
+}
+
+btn-remove{
+  text-decoration: none;
+  border: 0;
+  display: inline-block;
+  cursor: pointer;
+}
   
 /*-------------------------*/
 .header,
