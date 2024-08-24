@@ -248,6 +248,7 @@ a{
     justify-content: left;
   }
 
+/* Leave message and messages */
 input, textarea{
   width: 100%;
 }
@@ -274,6 +275,10 @@ btn-remove{
   border: 0;
   display: inline-block;
   cursor: pointer;
+}
+
+#messages{
+  display: none;
 }
   
 /*-------------------------*/
