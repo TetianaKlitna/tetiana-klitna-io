@@ -26,7 +26,7 @@ for(let i = 0; i < skills.length; i++){
 }
 
 // Handle Message Form Submit
-const messageForm = document.getElementById("leave_message");
+const messageForm = document.forms['leave_message'];
 messageForm.addEventListener("submit", 
     event => {
         
@@ -45,13 +45,13 @@ messageForm.addEventListener("submit",
         let newMessage = document.createElement("li");
 
         let removeButton = document.createElement("button");
-        removeButton.innerHTML = "<img class = 'btn-remove' src = 'img/git status.png' alt = 'remove icon'>";
+        removeButton.innerHTML = "<img class = 'btn-remove' src = 'img/remove_icon.png' alt = 'remove icon'>";
         removeButton.type = "button";
         removeButton.addEventListener("click", 
             event => {
             let entry = event.target.parentNode;
             entry.remove();
-        );
+    });
         
         newMessage.innerHTML = `<a href='mailto:${email}'><strong>${name}</strong></a>:  <span> ${message} </span> `;
         newMessage.appendChild(removeButton);
