@@ -90,6 +90,7 @@ fetch('https://api.github.com/users/TetianaKlitna/repos')
             let newProject = document.createElement("li");
             newProject.innerHTML = `<a href = '${data[i].html_url}'> <img src = "img/html_code_icon.png"><br>${data[i].name}</a>`;
             projectsList.appendChild (newProject);
+            console.log(`${data[i].name} saccessfully added.`)
         }
       
     }
