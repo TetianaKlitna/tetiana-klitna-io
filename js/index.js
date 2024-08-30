@@ -14,14 +14,19 @@ footerText.innerText = "Today is " + today;
 footer.append(footerText);
 
 //Create List of Skills
-let skills = ["HTML", "CSS", "JavaScript", "Java", "Oracle", "Python"];
+let skills = {"HTML": "img/html_icon.png", 
+            "CSS": "img/css_icon.png", 
+            "JavaScript": "img/js_icon.png",
+            "Java": "img/java_icon.png",
+            "Oracle" : "img/oracle_icon.png",
+            "Python": "img/python_icon.png"};
 let ulItem  = document.getElementById("skills").querySelector("ul");
 ulItem.style.listStyle = "none";
 
-let i = 0;
-for(let i = 0; i < skills.length; i++){
+for (const key in skills) {
+    console.log(key);
     const titleItem = document.createElement("li");
-    titleItem.textContent = skills[i]; 
+    titleItem.innerHTML = `<img src=${skills[key]} alt="Python logo" /><p>${key}</p>`; 
     ulItem.append(titleItem);
 }
 
@@ -61,12 +66,34 @@ messageForm.addEventListener("submit",
     });
 
 function toggleMessagesSection(messageSection, messageList) {
-    // const messagesSection = document.getElementById("messages");
-    // let messageList = messagesSection.querySelector("ul");
-    //console.log(messageList.children.length);
     if (messageList.children.length > 0) {
         messageSection.style.display = 'block';
     } else {
         messageSection.style.display= 'none';
     }
 }
+//Display Repositories from GitHub in List  
+fetch('https://api.github.com/users/TetianaKlitna/repos')
+  .then(response => {
+    if (!response.ok) {
+      throw new Error('Request failed');
+    }
+    return response.json(); 
+  })
+  .then(data => {
+    const projects = ["tetiana-klitna-io"];
+    const projectsSection = document.getElementById("projects");
+    let projectsList = projectsSection.querySelector("ul");
+    projectsList.style.listStyle = 'none';
+    for(let i = 0; i < data.length; i++){
+        if(projects.includes(data[i].name)){
+            let newProject = document.createElement("li");
+            newProject.innerHTML = `<a href = '${data[i].html_url}'> <img src = "img/html_code_icon.png"><br>${data[i].name}</a>`;
+            projectsList.appendChild (newProject);
+        }
+      
+    }
+  })
+  .catch(error => {
+    console.error('An error occurred:', error);
+  });
