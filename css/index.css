@@ -141,11 +141,6 @@ input[type="checkbox"]:checked {
   background-image: url('../img/delete_icon.png');
 }
 
-/*when the checkbox is checked, we’ll show the menu*/
-#humburger:checked ~ 
- .nav-bar {
-   display: block;
- }
 
 /*------Content-----------*/
 .content {
@@ -315,6 +310,12 @@ btn-remove{
 
   .nav-bar{
     display: none;
+  }
+
+  /*when the checkbox is checked, we’ll show the menu*/
+  #humburger:checked ~ 
+  .nav-bar {
+    display: block;
   }
 
 }
