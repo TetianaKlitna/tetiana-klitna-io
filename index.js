@@ -81,12 +81,12 @@ fetch('https://api.github.com/users/TetianaKlitna/repos')
     return response.json(); 
   })
   .then(data => {
-    const projects = ["tetiana-klitna-io"];
     const projectsSection = document.getElementById("projects");
     let projectsList = projectsSection.querySelector("ul");
     projectsList.style.listStyle = 'none';
     for(let i = 0; i < data.length; i++){
-        if(projects.includes(data[i].name)){
+        let project = data[i].name;
+        if(project.endsWith("-ctd")){
             let newProject = document.createElement("li");
             newProject.innerHTML = `<a href = '${data[i].html_url}'> <img src = "img/html_code_icon.png"><br>${data[i].name}</a>`;
             projectsList.appendChild (newProject);
