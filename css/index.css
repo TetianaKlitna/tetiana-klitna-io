@@ -93,7 +93,7 @@ body {
   width: 80%;
 } 
 
-.my-name{
+h1{
   font-family: "Sofia", sans-serif;
   font-size: 24px;
   text-align: left;
@@ -237,7 +237,7 @@ a{
     flex-wrap: wrap;
     padding-left: 10px;
     align-items: left;
-    justify-content: left;
+    justify-content: space-between;
   }
 
 /* Leave message and messages */
@@ -290,7 +290,7 @@ btn-remove{
 }
 /*--------Start Media-------*/
 /*styles for mobiles*/
-@media (max-width: 830px)
+@media (max-width: 1035px)
  { 
 
   .img-section img {
@@ -320,7 +320,7 @@ btn-remove{
 
 }
 /*styles for tablets*/
-@media (min-width: 831px) and (max-width: 1023px){
+@media (min-width: 1036px) and (max-width: 1070px){
   /* .nav-bar{
     flex-direction: column;
   }
@@ -345,7 +345,7 @@ btn-remove{
 
 
 /* styles for desktops*/
-@media (min-width: 1024px) {
+@media (min-width: 1070px) {
    body {
     font-size: 24px;
    }
